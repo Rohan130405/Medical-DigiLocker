@@ -21,7 +21,7 @@ import {
 /* 🔐 AUTH PROTECTION */
 onAuthStateChanged(auth, user => {
   if (!user) {
-    window.location.href = "index.html";
+    window.location.href = "./index.html";
   } else {
     loadFiles(user.uid);
   }
@@ -93,3 +93,4 @@ function logout() {
 /* 🔗 Make functions accessible to HTML */
 window.uploadFile = uploadFile;
 window.logout = logout;
+
