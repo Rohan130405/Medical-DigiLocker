@@ -17,7 +17,7 @@ import {
   onAuthStateChanged,
   signOut
 } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
-
+import { auth, db, storage } from "./firebase.js"; // 🔥 MISSING EARLIER
 /* 🔐 AUTH PROTECTION */
 onAuthStateChanged(auth, user => {
   if (!user) {
@@ -93,4 +93,5 @@ window.location.href =
 
 /* 🔗 Make functions accessible to HTML */
 window.uploadFile = uploadFile;
+
 window.logout = logout;
