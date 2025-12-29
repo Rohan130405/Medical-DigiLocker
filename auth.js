@@ -19,9 +19,11 @@ function googleSignIn() {
       );
     })
     .then(() => {
-      window.location.href = "dashboard.html";
+      window.location.href = "./dashboard.html";
+
     })
     .catch(error => alert(error.message));
 }
 
 window.googleSignIn = googleSignIn;
+
